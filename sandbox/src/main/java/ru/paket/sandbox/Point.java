@@ -10,4 +10,13 @@ public class Point {
         this.b = b;
     }
 
+    public double distance() {
+
+
+        return (this.a - this.b) * (this.a - this.b);
+
+
+
+    }
+
 }
