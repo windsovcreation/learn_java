@@ -2,20 +2,17 @@ package ru.paket.sandbox;
 
 public class Point {
 
-    public double a;
-    public double b;
+    public double x;
+    public double y;
 
-    public Point (double a, double b){
-        this.a = a;
-        this.b = b;
+    public Point (double x1, double y2){
+        this.x = x1;
+        this.y = y2;
     }
 
-    public double distance() {
+    public double distance(Point p2){
 
-
-        return (this.a - this.b) * (this.a - this.b);
-
-
+        return Math.sqrt((p2.x - this.x) * (p2.x - this.x) + (p2.y - this.y) * (p2.y - this.y));
 
     }
 

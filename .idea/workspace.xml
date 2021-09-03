@@ -75,8 +75,8 @@
     </key>
   </component>
   <component name="RunManager" selected="Gradle.GroupCreationTests">
-    <configuration name="Distancecheck" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.paket.sandbox.Distancecheck" />
+    <configuration name="Distance" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.paket.sandbox.Distance" />
       <module name="sandbox.main" />
       <extension name="coverage">
         <pattern>
@@ -154,8 +154,8 @@
       <list>
         <item itemvalue="Gradle.GroupCreationTests" />
         <item itemvalue="Gradle.PointTests" />
+        <item itemvalue="Application.Distance" />
         <item itemvalue="Application.Helper" />
-        <item itemvalue="Application.Distancecheck" />
         <item itemvalue="Application.MyFirstProgram" />
       </list>
     </recent_temporary>
