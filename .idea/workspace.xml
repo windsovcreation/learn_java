@@ -74,7 +74,7 @@
       <recent name="ru.paket.sandbox" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.PointTests">
+  <component name="RunManager" selected="TestNG.PointTests">
     <configuration name="Distance" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.paket.sandbox.Distance" />
       <module name="sandbox.main" />
@@ -101,34 +101,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyFirstProgram" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.paket.sandbox.MyFirstProgram" />
-      <module name="sandbox.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PointTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/sandbox" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;ru.paket.sandbox.PointTests&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <configuration name="GroupCreationTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
@@ -146,20 +118,54 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PointTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="sandbox.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.paket.sandbox.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.paket.sandbox" />
+      <option name="MAIN_CLASS_NAME" value="ru.paket.sandbox.PointTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SquareTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="sandbox.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.paket.sandbox.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.paket.sandbox" />
+      <option name="MAIN_CLASS_NAME" value="ru.paket.sandbox.SquareTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Distance" />
       <item itemvalue="Application.Helper" />
-      <item itemvalue="Application.MyFirstProgram" />
-      <item itemvalue="Gradle.PointTests" />
       <item itemvalue="TestNG.GroupCreationTests" />
+      <item itemvalue="TestNG.SquareTests" />
+      <item itemvalue="TestNG.PointTests" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.PointTests" />
+        <item itemvalue="TestNG.PointTests" />
+        <item itemvalue="TestNG.SquareTests" />
         <item itemvalue="TestNG.GroupCreationTests" />
         <item itemvalue="Application.Distance" />
         <item itemvalue="Application.Helper" />
-        <item itemvalue="Application.MyFirstProgram" />
       </list>
     </recent_temporary>
   </component>
