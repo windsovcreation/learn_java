@@ -26,7 +26,7 @@ public class HelperBase {
 
     protected void select(By locator, String text) {
         wd.findElement(locator).click();
-        new Select((WebElement) locator).selectByVisibleText(text);
+        new Select(wd.findElement(locator)).selectByVisibleText(text);
     }
 
     private boolean isElementPresent(By by) {
