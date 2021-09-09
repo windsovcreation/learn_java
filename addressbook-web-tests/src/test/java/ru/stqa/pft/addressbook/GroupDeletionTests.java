@@ -4,19 +4,18 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
+import static org.testng.Assert.*;
 import org.openqa.selenium.*;
 
-public class GroupCreationTests extends TestBase {
+public class GroupDeletionTests extends TestBase {
 
   @Test
-  public void testGroupCreation() throws Exception {
-
+  public void testGroupDeletion() throws Exception {
     gotoGroupPage();
-    initGroupCreation();
-    fillGroupForm(new GroupData("test1", "test2", "test3"));
-    submitGroupCreation();
+    selectGroup();
+    deleteSelectedGroups();
     returnToGroupPage();
-
   }
+
 
 }
