@@ -10,9 +10,25 @@ public class ContactHelper extends HelperBase {
         super(wd);
     }
 
+    public void selectFirstContact() {
+        click(By.name("selected[]"));
+
+}
 
     public void submitContactCreation() {
         click(By.name("submit"));
+    }
+
+    public void initContactDeletion() {
+        click (By.xpath("//input[@value='Delete']"));
+    }
+
+    public void initContactModification() {
+        click (By.xpath("//img[@alt='Edit']"));
+    }
+
+    public void confirmDeletion() {
+        wd.switchTo().alert().accept();
     }
 
     public void fillContactForm(ContactData contactData) {
