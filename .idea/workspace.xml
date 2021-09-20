@@ -78,7 +78,7 @@
       <recent name="ru.paket.sandbox" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Collections">
+  <component name="RunManager" selected="TestNG.GroupCreationTests">
     <configuration name="Collections" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.paket.sandbox.Collections" />
       <module name="sandbox.main" />
@@ -92,24 +92,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ContactCreationTests" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="addressbook-web-tests.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="appmanager.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook" />
-      <option name="MAIN_CLASS_NAME" value="tests.ContactCreationTests" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ContactDeletionTests" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="GroupCreationTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
         <pattern>
@@ -118,7 +101,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.ContactDeletionTests" />
+      <option name="MAIN_CLASS_NAME" value="tests.GroupCreationTests" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -126,7 +109,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ContactModificationTests" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="GroupDeletionTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
         <pattern>
@@ -135,7 +118,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.ContactModificationTests" />
+      <option name="MAIN_CLASS_NAME" value="tests.GroupDeletionTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GroupModificationTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="addressbook-web-tests.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.GroupModificationTests" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -161,19 +161,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="TestNG.ContactCreationTests" />
-      <item itemvalue="TestNG.ContactDeletionTests" />
-      <item itemvalue="TestNG.ContactModificationTests" />
       <item itemvalue="TestNG.PrimeTests" />
       <item itemvalue="Application.Collections" />
+      <item itemvalue="TestNG.GroupCreationTests" />
+      <item itemvalue="TestNG.GroupDeletionTests" />
+      <item itemvalue="TestNG.GroupModificationTests" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.GroupCreationTests" />
+        <item itemvalue="TestNG.GroupDeletionTests" />
+        <item itemvalue="TestNG.GroupModificationTests" />
         <item itemvalue="Application.Collections" />
         <item itemvalue="TestNG.PrimeTests" />
-        <item itemvalue="TestNG.ContactDeletionTests" />
-        <item itemvalue="TestNG.ContactModificationTests" />
-        <item itemvalue="TestNG.ContactCreationTests" />
       </list>
     </recent_temporary>
   </component>
