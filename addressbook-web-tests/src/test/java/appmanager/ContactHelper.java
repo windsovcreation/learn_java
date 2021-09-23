@@ -12,9 +12,8 @@ public class ContactHelper extends HelperBase {
         super(wd);
     }
 
-    public void selectFirstContact() {
-        click(By.name("selected[]"));
-
+    public void selectContact(int index) {
+        wd.findElements(By.name("selected[]")).get(index).click();
 }
 
     public void submitContactCreation() {
