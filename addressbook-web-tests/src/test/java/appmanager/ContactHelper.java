@@ -81,9 +81,19 @@ public class ContactHelper extends HelperBase {
         List<ContactData> contacts = new ArrayList<ContactData>();
         List<WebElement> elements = wd.findElements(By.name("entry"));
         for (WebElement element : elements) {
+<<<<<<< Updated upstream
             String name = element.getText();
             ContactData contact = new ContactData(name, null, null, null, null, null, null, null, null);
+=======
+            List<WebElement> cells = element.findElements(By.tagName("td"));
+            String surname = cells.get(1).getText();
+            String name = cells.get(2).getText();
+            String id = element.findElement(By.tagName("input")).getAttribute("value");
+            ContactData contact = new ContactData(id, name, surname, null, null, null, null, null, null, null);
+>>>>>>> Stashed changes
             contacts.add(contact);
+            System.out.println("name: " + surname);
+            System.out.println("id: " + id);
         }
         return contacts;
     }
