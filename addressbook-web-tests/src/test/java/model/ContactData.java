@@ -30,7 +30,7 @@ public class ContactData {
     }
 
     public ContactData(String name, String surname, String address, String phone, String email, String bday, String bmonth, String byear, String group) {
-        this.id = 0;
+        this.id = Integer.MAX_VALUE;
         this.name = name;
         this.surname = surname;
         this.address = address;
@@ -87,19 +87,6 @@ public class ContactData {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        ContactData that = (ContactData) o;
-        return id == that.id && Objects.equals(name, that.name) && Objects.equals(surname, that.surname);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, name, surname);
-    }
-
-    @Override
     public String toString() {
         return "ContactData{" +
                 "id='" + id + '\'' +
@@ -108,4 +95,16 @@ public class ContactData {
                 '}';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ContactData that = (ContactData) o;
+        return Objects.equals(name, that.name) && Objects.equals(surname, that.surname);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, surname);
+    }
 }
