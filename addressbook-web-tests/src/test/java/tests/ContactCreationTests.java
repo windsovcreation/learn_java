@@ -5,7 +5,6 @@ import org.testng.annotations.Test;
 import model.ContactData;
 
 import java.util.Comparator;
-import java.util.HashSet;
 import java.util.List;
 
 public class ContactCreationTests extends TestBase {
@@ -17,7 +16,7 @@ public class ContactCreationTests extends TestBase {
     ContactData contact = new ContactData("Vasya", "Pupkin", "Russia\nMoscow\nLubyanka 21",
             "89267456789", "pupkin@mail.ru", "12", "November", "1980", "test1");
     app.getContactHelper().createContact(contact, true);
-    app.getNavigationHelper().returnToHomePage();
+    app.goTo().returnToHomePage();
     List<ContactData> after = app.getContactHelper().getContactList();
     Assert.assertEquals(after.size(), before.size() + 1);
 
