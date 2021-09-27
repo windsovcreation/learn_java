@@ -2,20 +2,25 @@ package tests;
 
 import model.ContactData;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.util.List;
 
 public class ContactDeletionTests extends TestBase{
 
-    @Test
-    public void testContactDeletion() {
-
+    @BeforeMethod
+    public void ensurePrecondition() {
         if (! app.getContactHelper().isThereAContact()) {
-             app.getContactHelper().createContact(new ContactData("Vasya", "Pupkin", "Russia\nMoscow\nLubyanka 21",
-                     "89267456789", "pupkin@mail.ru", "12", "November", "1980", "test1"), true);
+            app.getContactHelper().createContact(new ContactData("Vasya", "Pupkin", "Russia\nMoscow\nLubyanka 21",
+                    "89267456789", "pupkin@mail.ru", "12", "November", "1980", "test1"), true);
             app.goTo().returnToHomePage();
         }
+    }
+
+    @Test
+    public void testContactDeletion() {
+        
         List<ContactData> before = app.getContactHelper().getContactList();
         app.getContactHelper().selectContact(before.size() - 1);
         app.getContactHelper().initContactDeletion();
