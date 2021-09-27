@@ -1,6 +1,5 @@
 package appmanager;
 
-import model.GroupData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import model.ContactData;
@@ -62,17 +61,23 @@ public class ContactHelper extends HelperBase {
 
         }
 
-    public void createContact(ContactData contact, boolean creation) {
+    public void create(ContactData contact, boolean creation) {
         gotoAddNewContactPage();
         fillContactForm(contact, true);
         submitContactCreation();
     }
 
-    public void modifyContact(int index, ContactData contact) {
+    public void modify(int index, ContactData contact) {
         initContactModification(index);
         fillContactForm(contact, false);
         submitContactModification();
 
+    }
+
+    public void delete(int index) {
+        selectContact(index);
+        initContactDeletion();
+        confirmDeletion();
     }
 
     public boolean isThereAContact() {
@@ -84,7 +89,7 @@ public class ContactHelper extends HelperBase {
     }
 
 
-    public List<ContactData> getContactList() {
+    public List<ContactData> list() {
         List<ContactData> contacts = new ArrayList<ContactData>();
         List<WebElement> elements = wd.findElements(By.name("entry"));
         for (WebElement element : elements) {
