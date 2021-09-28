@@ -3,47 +3,52 @@ package model;
 import java.util.Objects;
 
 public class ContactData {
-    private int id;
-    private final String name;
-    private final String surname;
-    private final String address;
-    private final String phone;
-
-
-    private final String email;
-    private final String bday;
-    private final String bmonth;
-    private final String byear;
+    private int id = Integer.MAX_VALUE;
+    private String name;
+    private String surname;
+    private String address;
+    private String phone;
+    private String email;
     private String group;
 
-    public ContactData(int id, String name, String surname, String address, String phone, String email, String bday, String bmonth, String byear, String group) {
-        this.id = id;
-        this.name = name;
-        this.surname = surname;
-        this.address = address;
-        this.phone = phone;
-        this.email = email;
-        this.bday = bday;
-        this.bmonth = bmonth;
-        this.byear = byear;
-        this.group = group;
-    }
-
-    public ContactData(String name, String surname, String address, String phone, String email, String bday, String bmonth, String byear, String group) {
-        this.id = Integer.MAX_VALUE;
-        this.name = name;
-        this.surname = surname;
-        this.address = address;
-        this.phone = phone;
-        this.email = email;
-        this.bday = bday;
-        this.bmonth = bmonth;
-        this.byear = byear;
-        this.group = group;
-    }
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public ContactData withId(int id) {
+        this.id = id;
+        return this;
+    }
+
+    public ContactData withName(String name) {
+        this.name = name;
+        return this;
+    }
+
+    public ContactData withSurname(String surname) {
+        this.surname = surname;
+        return this;
+    }
+
+    public ContactData withAddress(String address) {
+        this.address = address;
+        return this;
+    }
+
+    public ContactData withPhone(String phone) {
+        this.phone = phone;
+        return this;
+    }
+
+    public ContactData withEmail(String email) {
+        this.email = email;
+        return this;
+    }
+
+    public ContactData withGroup(String group) {
+        this.group = group;
+        return this;
     }
 
     public String getName() {
@@ -64,18 +69,6 @@ public class ContactData {
 
     public String getEmail() {
         return email;
-    }
-
-    public String getBday() {
-        return bday;
-    }
-
-    public String getBmonth() {
-        return bmonth;
-    }
-
-    public String getByear() {
-        return byear;
     }
 
     public String getGroup() {

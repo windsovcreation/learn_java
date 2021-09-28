@@ -50,9 +50,6 @@ public class ContactHelper extends HelperBase {
         type(By.name("address"), contactData.getAddress());
         type(By.name("mobile"), contactData.getPhone());
         type(By.name("email"), contactData.getEmail());
-        select(By.name("bday"), contactData.getBday());
-        select(By.name("bmonth"), contactData.getBmonth());
-        type(By.name("byear"), contactData.getByear());
         if (creation) {
             new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroup());
         } else {
@@ -97,8 +94,7 @@ public class ContactHelper extends HelperBase {
             String surname = cells.get(1).getText();
             String name = cells.get(2).getText();
             int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
-            ContactData contact = new ContactData(id, name, surname, null, null, null, null, null, null, null);
-            contacts.add(contact);
+            contacts.add(new ContactData().withId(id).withName(name).withSurname(surname));
             System.out.println("name: " + surname);
             System.out.println("id: " + id);
         }
