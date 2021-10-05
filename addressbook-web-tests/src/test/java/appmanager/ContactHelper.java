@@ -1,6 +1,7 @@
 package appmanager;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import model.ContactData;
 import org.openqa.selenium.WebElement;
@@ -54,7 +55,11 @@ public class ContactHelper extends HelperBase {
         select(By.name("bmonth"), contactData.getBmonth());
         type(By.name("byear"), contactData.getByear());
         if (creation) {
-            new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroup());
+            try {
+                new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroup());
+            } catch (NoSuchElementException e) {
+                System.out.println("Element " + contactData.getGroup().toString() + " not found!");
+            }
         } else {
             Assert.assertFalse(isElementPresent(By.name("new_group")));
         }
